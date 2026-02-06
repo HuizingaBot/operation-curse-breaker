@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sports Witch | Professional Curse Removal Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple-dark: #1a0a2e;
+            --purple-mid: #2d1b4e;
+            --purple-light: #4a2c6a;
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --text-light: #f5f5f5;
+            --text-muted: #b8b8b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-mid) 50%, var(--purple-light) 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold-light);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--purple-dark);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+        
+        .curse-types {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--gold-light);
+        }
+        
+        .curse-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .curse-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .curse-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+        
+        .curse-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .curse-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--gold-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .curse-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+        
+        .how-it-works {
+            padding: 4rem 0;
+            background: rgba(0, 0, 0, 0.2);
+            margin: 0 -2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--purple-dark);
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .step h3 {
+            color: var(--gold-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .curse-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="logo">🔮 The Sports Witch</h1>
+            <p class="tagline">Professional Curse Removal Services for Dedicated Fans</p>
+        </header>
+        
+        <section class="hero">
+            <h2>Is Your Team Cursed?</h2>
+            <p>Generational trauma. Playoff heartbreak. The same old story, year after year. You didn't come this far just to come this far. Let The Sports Witch break the hex that's been holding your team back.</p>
+            <a href="#curses" class="cta-button">Break the Curse — $9.99</a>
+        </section>
+        
+        <section class="curse-types" id="curses">
+            <h2 class="section-title">Choose Your Curse Removal</h2>
+            <div class="curse-grid">
+                <div class="curse-card" onclick="selectCurse('playoff')">
+                    <div class="curse-icon">🏆</div>
+                    <h3>Playoff Choke Curse</h3>
+                    <p>First round exits. Blowing big leads. The big game always slips away. Time to clear that energy.</p>
+                    <div class="price">$9.99</div>
+                </div>
+                
+                <div class="curse-card" onclick="selectCurse('refs')">
+                    <div class="curse-icon">👁️</div>
+                    <h3>Referee Conspiracy Curse</h3>
+                    <p>Bad calls. Missed penalties. The zebras are out to get you. Restore cosmic officiating balance.</p>
+                    <div class="price">$9.99</div>
+                </div>
+                
+                <div class="curse-card" onclick="selectCurse('injury')">
+                    <div class="curse-icon">🤕</div>
+                    <h3>Injury Bug Curse</h3>
+                    <p>Star players on IR. The training room is crowded. Heal the team's aura and protect the roster.</p>
+                    <div class="price">$9.99</div>
+                </div>
+                
+                <div class="curse-card" onclick="selectCurse('generational')">
+                    <div class="curse-icon">⏰</div>
+                    <h3>Generational Trauma Curse</h3>
+                    <p>Your parents suffered. You suffered. Your kids are starting to suffer. End the cycle now.</p>
+                    <div class="price">$9.99</div>
+                </div>
+                
+                <div class="curse-card" onclick="selectCurse('rival')">
+                    <div class="curse-icon">⚔️</div>
+                    <h3>Rival Voodoo Curse</h3>
+                    <p>They always win. You always lose. The psychological edge is real. Flip the script.</p>
+                    <div class="price">$9.99</div>
+                </div>
+                
+                <div class="curse-card" onclick="selectCurse('comprehensive')">
+                    <div class="curse-icon">✨</div>
+                    <h3>Comprehensive Cleansing</h3>
+                    <p>Multiple curses detected? Full franchise aura purification. The complete package.</p>
+                    <div class="price">$14.99</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="how-it-works">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Select Your Curse</h3>
+                    <p>Identify what's plaguing your franchise. Choose the curse that resonates.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Make Offering</h3>
+                    <p>Secure payment via Stripe. Your transaction helps maintain the sacred energy.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Receive Certificate</h3>
+                    <p>Instant digital certificate proving your curse has been professionally removed. Share it. Frame it. Believe in it.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2026 The Sports Witch. Not affiliated with any professional sports league.</p>
+            <p>This is satire. But the hope is real. 🏈</p>
+            <p style="margin-top: 1rem;"><a href="#" onclick="alert('Coming soon!')">Terms</a> • <a href="#" onclick="alert('Coming soon!')">Privacy</a> • <a href="#" onclick="alert('Coming soon!')">Contact</a></p>
+        </footer>
+    </div>
+    
+    <script>
+        function selectCurse(type) {
+            alert('Curse removal system coming soon! Selected: ' + type);
+            // Future: Redirect to Stripe checkout with curse type
+        }
+    </script>
+</body>
+</html>
